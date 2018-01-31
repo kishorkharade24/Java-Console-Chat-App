@@ -47,10 +47,10 @@ public class ChatClient {
 	}
 	
 	public static void main (String[] args) {
-		//if (args.length < 2) return;
+		if (args.length < 2) return;
 		
-		String hostname = "localhost"; //args[0];
-		int port = 8989;//Integer.parseInt(args[1]);
+		String hostname = args[0];
+		int port = Integer.parseInt(args[1]);
 		
 		ChatClient client = new ChatClient(hostname, port);
 		client.execute();
