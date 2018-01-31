@@ -49,7 +49,7 @@ public class UserThread extends Thread {
 			do {
 				clientMessage = reader.readLine();
 				serverMessage = "[" + userName + "]: " + clientMessage;
-				server.broadcast(clientMessage, this);
+				server.broadcast("[" + userName + "]: " + clientMessage, this);
 			} while (!clientMessage.equalsIgnoreCase("bye"));
 			
 			server.removeUser(userName, this);
