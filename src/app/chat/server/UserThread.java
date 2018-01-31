@@ -41,7 +41,7 @@ public class UserThread extends Thread {
 			String userName = reader.readLine();
 			server.addUserName(userName);
 			
-			String serverMessage = "New user connected : " + userName;
+			String serverMessage = "New user connected: " + userName + "\n*********************************************";
 			server.broadcast(serverMessage, this);
 			
 			String clientMessage;
